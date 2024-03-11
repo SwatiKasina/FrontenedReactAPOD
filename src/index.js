@@ -7,13 +7,25 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import ByDateForm from './ByDateForm';
+import ByCountOrDateRange from './Bycountdate';
 
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
+    children: [
+      {
+        path:"bydate",
+        element: <ByDateForm/>
+      },
+      {
+        path:"bycountdate",
+        element: <ByCountOrDateRange/>
+      },
+    ]
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
