@@ -9,7 +9,8 @@ const ByCountOrDateRange = () => {
   const [apods, setApods] = useState([]);
 
   const fetchApods = async () => {
-    let apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=IabhjfXdft4AXDugcZhBfr8fMRb1mfnk4RfYyNz0';
+    // let apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=IabhjfXdft4AXDugcZhBfr8fMRb1mfnk4RfYyNz0';
+    let apiUrl = 'https://localhost:8080/apod/call';
     if (selection === 'count') {
       apiUrl += `&count=${count}`;
     } else {

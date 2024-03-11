@@ -9,8 +9,9 @@ const ByDateForm = () => {
     useEffect(() => {
         // Fetch the APOD data for today or a selected date
         const fetchAPOD = async () => {
-            const apiKey = 'DEMO_KEY'; // Use your NASA API key
-            let apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
+            // const apiKey = 'DEMO_KEY'; // Use your NASA API key
+            // let apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
+            let apiUrl = 'https://localhost:8080/apod/call';
             if (date) apiUrl += `&date=${date}`;
             const response = await fetch(apiUrl);
             const data = await response.json();
