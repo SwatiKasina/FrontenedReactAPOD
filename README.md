@@ -3,7 +3,7 @@
 
 This project is Assignment 2 for the Web Development course. It consists of a web application built using React for the frontend and Spring Boot for the backend.
 
-## Project Structure
+## Directory Structure
 
 ```
 .
@@ -82,26 +82,28 @@ This project is Assignment 2 for the Web Development course. It consists of a we
 └── webpack.config.js
 ```
 
-## Features
+## Project Description
 
-- **Frontend (React)**: The frontend is built using React, a JavaScript library for building user interfaces. It includes components for displaying home page, forms, and other features.
+- **Frontend (React)**: The `src` directory contains the source code for the frontend React application. Key components include `App.js`, `Nav.js`, `footer.js`, etc. Images used in the frontend are stored in the `public` directory.
 
-- **Backend (Spring Boot)**: The backend is built using Spring Boot, a Java-based framework for building web applications. It provides RESTful APIs to interact with the frontend and serves static resources.
+- **Backend (Spring Boot)**: The `springbootapp` directory contains the backend Spring Boot application. The `src/main` directory contains Java classes and resources, including controllers (`Controllers.java`), the main application class (`NasaApodApiApplication.java`), and configuration files.
 
-## Setup and Usage
+## Usage
 
-1. **Frontend Setup**:
-   - Navigate to the `Assignment2FrontEnd` directory.
-   - Install dependencies: `npm install`.
-   - Run the development server: `npm start`.
+### Frontend (React)
 
-2. **Backend Setup**:
-   - Navigate to the `springbootapp` directory.
-   - Build the Spring Boot project: `./gradlew build`.
-   - Run the Spring Boot application: `./gradlew bootRun`.
+1. Navigate to the `src` directory.
+2. Install dependencies: `npm install`.
+3. Run the development server: `npm start` to test frontend.
+4. Run build into static of springboot  : `npm run build`.
+5. Access the application in your web browser.
 
-3. **Accessing the Application**:
-   - Once both frontend and backend are running, access the application in your web browser.
+### Backend (Spring Boot)
+
+1. Navigate to the `springbootapp` directory.
+2. Build the Spring Boot project: `./gradlew build`.
+3. Run the Spring Boot application: `./gradlew bootRun`.
+4. Access the application in your web browser.
 
 ## Credits
 
