@@ -11,8 +11,8 @@ const ByDateForm = () => {
         const fetchAPOD = async () => {
             // const apiKey = 'DEMO_KEY'; // Use your NASA API key
             // let apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
-            let apiUrl = 'https://localhost:8080/apod/call';
-            if (date) apiUrl += `&date=${date}`;
+            let apiUrl = '/apod/call';
+            if (date) apiUrl += `?date=${date}`;
             const response = await fetch(apiUrl);
             const data = await response.json();
             setApodData(data);
@@ -34,7 +34,7 @@ const ByDateForm = () => {
         }}>
             <Container className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
                 <Card style={{ maxWidth: '800px', backgroundColor: 'rgb(255,255,255,0.7)' }}>
-                    <Row noGutters>
+                    <Row nogutters>
                         <Col md={12} className="d-flex flex-column justify-content-center">
                             <Card.Body>
                                 <Form onSubmit={handleSubmit}>

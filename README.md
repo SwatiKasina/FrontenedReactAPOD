@@ -1,6 +1,71 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Web Development Assignment 2
+
+This project is Assignment 2 for the Web Development course. It consists of a web application built using React for the frontend and Spring Boot for the backend.
+
+## Project Structure
+
+```
+.
+├── Assignment2FrontEnd            # Frontend (React) directory
+│   ├── public                     # Public directory for static assets
+│   │   └── ...                    # Various static files (favicon, manifest, etc.)
+│   ├── src                        # Source directory for React components
+│   │   └── ...                    # React components, CSS, and other files
+│   ├── package.json               # npm package configuration file
+│   ├── README.md                  # README file for the frontend
+│   └── webpack.config.js          # Webpack configuration file
+├── springbootapp                  # Backend (Spring Boot) directory
+│   ├── src/main                  # Source directory for Java classes and resources
+│   │   ├── java/com/example/demo # Java classes (Controllers, Application class, etc.)
+│   │   └── resources             # Resources (application properties, static files, templates)
+│   │       ├── static            # Static files served by Spring Boot
+│   │       └── templates         # Thymeleaf templates (if used)
+│   ├── build.gradle              # Gradle build script
+│   ├── gradlew                   # Gradle wrapper script
+│   ├── gradlew.bat               # Gradle wrapper script for Windows
+│   ├── settings.gradle           # Gradle settings file
+│   └── README.md                 # README file for the backend
+├── images                        # Directory containing project images
+│   └── ...                       # Various images used in the project
+├── log.txt                       # Log file (if applicable)
+├── package.json                  # npm package configuration file (if applicable)
+├── package-lock.json             # npm package lock file (if applicable)
+├── README.md                     # Main README file for the project
+├── tmp.txt                       # Temporary file (if applicable)
+└── webpack.config.js             # Webpack configuration file (if applicable)
+```
+
+## Features
+
+- **Frontend (React)**: The frontend is built using React, a JavaScript library for building user interfaces. It includes components for displaying home page, forms, and other features.
+
+- **Backend (Spring Boot)**: The backend is built using Spring Boot, a Java-based framework for building web applications. It provides RESTful APIs to interact with the frontend and serves static resources.
+
+## Setup and Usage
+
+1. **Frontend Setup**:
+   - Navigate to the `Assignment2FrontEnd` directory.
+   - Install dependencies: `npm install`.
+   - Run the development server: `npm start`.
+
+2. **Backend Setup**:
+   - Navigate to the `springbootapp` directory.
+   - Build the Spring Boot project: `./gradlew build`.
+   - Run the Spring Boot application: `./gradlew bootRun`.
+
+3. **Accessing the Application**:
+   - Once both frontend and backend are running, access the application in your web browser.
+
+## Credits
+
+- Developed by Swati K
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-4.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
 
 ## Available Scripts
 
@@ -28,43 +93,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
