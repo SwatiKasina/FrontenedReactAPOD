@@ -7,33 +7,79 @@ This project is Assignment 2 for the Web Development course. It consists of a we
 
 ```
 .
-├── Assignment2FrontEnd            # Frontend (React) directory
-│   ├── public                     # Public directory for static assets
-│   │   └── ...                    # Various static files (favicon, manifest, etc.)
-│   ├── src                        # Source directory for React components
-│   │   └── ...                    # React components, CSS, and other files
-│   ├── package.json               # npm package configuration file
-│   ├── README.md                  # README file for the frontend
-│   └── webpack.config.js          # Webpack configuration file
-├── springbootapp                  # Backend (Spring Boot) directory
-│   ├── src/main                  # Source directory for Java classes and resources
-│   │   ├── java/com/example/demo # Java classes (Controllers, Application class, etc.)
-│   │   └── resources             # Resources (application properties, static files, templates)
-│   │       ├── static            # Static files served by Spring Boot
-│   │       └── templates         # Thymeleaf templates (if used)
-│   ├── build.gradle              # Gradle build script
-│   ├── gradlew                   # Gradle wrapper script
-│   ├── gradlew.bat               # Gradle wrapper script for Windows
-│   ├── settings.gradle           # Gradle settings file
-│   └── README.md                 # README file for the backend
-├── images                        # Directory containing project images
-│   └── ...                       # Various images used in the project
-├── log.txt                       # Log file (if applicable)
-├── package.json                  # npm package configuration file (if applicable)
-├── package-lock.json             # npm package lock file (if applicable)
-├── README.md                     # Main README file for the project
-├── tmp.txt                       # Temporary file (if applicable)
-└── webpack.config.js             # Webpack configuration file (if applicable)
+├── image-1.png
+├── image-2.png
+├── image-3.png
+├── image-4.png
+├── image.png
+├── log.txt
+├── package.json
+├── package-lock.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── README.md
+├── springbootapp
+│   ├── build.gradle
+│   ├── gradle
+│   │   └── wrapper
+│   │       ├── gradle-wrapper.jar
+│   │       └── gradle-wrapper.properties
+│   ├── gradlew
+│   ├── gradlew.bat
+│   ├── HELP.md
+│   ├── image-1.png
+│   ├── image-2.png
+│   ├── image-3.png
+│   ├── image-4.png
+│   ├── image-5.png
+│   ├── image-6.png
+│   ├── image-7.png
+│   ├── image.png
+│   ├── readme.md
+│   ├── README.md
+│   ├── settings.gradle
+│   └── src
+│       ├── main
+│       │   ├── java
+│       │   │   └── com
+│       │   │       └── example
+│       │   │           └── demo
+│       │   │               ├── Controllers.java
+│       │   │               ├── NasaApodApiApplication.java
+│       │   │               └── Restcontrollers.java
+│       │   └── resources
+│       │       ├── application.properties
+│       │       ├── static
+│       │       │   └── built
+│       │       │       ├── bundle.js
+│       │       │       └── node_modules_web-vitals_dist_web-vitals_js.bundle.js
+│       │       └── templates
+│       │           └── index.html
+│       └── test
+│           └── java
+│               └── com
+│                   └── example
+│                       └── demo
+│                           └── NasaApodApiApplicationTests.java
+├── src
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── Bycountdate.js
+│   ├── ByDateForm.js
+│   ├── footer.js
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   ├── Nav.js
+│   ├── reportWebVitals.js
+│   └── setupTests.js
+└── webpack.config.js
 ```
 
 ## Features
