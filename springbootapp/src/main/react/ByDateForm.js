@@ -68,14 +68,13 @@ const ByDateForm = () => {
                             <Card.Body>
                                 <Card.Title>{apodData?.title}</Card.Title>
                                 <Card.Text>
-                                    {apodData?.date && <p><strong>Date:</strong> {apodData?.date}</p>}
-                                    {apodData?.copyright && <p><strong>Copyright:</strong> {apodData?.copyright}</p>}
-                                    {apodData?.media_type && <p><strong>Media Type:</strong> {apodData?.media_type}</p>}
-                                    {apodData?.explanation && <p><strong>Explanation:</strong> {apodData?.explanation}</p>}
+                                    {apodData?.date && <div>Date: {apodData?.date}</div>}
+                                    {apodData?.copyright && <div>Copyright: {apodData?.copyright}</div>}
+                                    {apodData?.media_type && <div>Media Type: {apodData?.media_type}</div>}
+                                    {apodData?.explanation && <div>Explanation: {apodData?.explanation}</div>}
                                     {apodData?.hdurl && (
-                                        <p>
-                                            <strong>HD Image:</strong> <a href={apodData?.hdurl} target="_blank" rel="noopener noreferrer">View HD Image</a>
-                                        </p>
+                                        <div>HD Image:<a href={apodData?.hdurl} target="_blank" >View HD Image</a>
+                                        </div>
                                     )}
                                 </Card.Text>
                             </Card.Body>
