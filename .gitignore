@@ -130,3 +130,5 @@ dist
 .pnp.*
 springbootapp/.gradle/**/*
 springbootapp/build/*
+
+springbootapp/src/main/react/node_modules/*
