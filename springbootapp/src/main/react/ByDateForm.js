@@ -1,28 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Button, Card, Container, Row, Col } from 'react-bootstrap';
 // import './ByDateForm.css'; // Assuming you have CSS for styling
+import { useStore } from './statestore';
 
 const ByDateForm = () => {
-    const [apodData, setApodData] = useState(null);
-    const [date, setDate] = useState('');
+    // const [apodData, setApodData] = useState(null);
+    let apodData = useStore((state) => state.apodData);
+    let setApodData = useStore((state) => state.setApodData);
+    // const [date, setDate] = useState('');
+    let date = useStore((state) => state.date);
+    let setDate = useStore((state) => state.setDate);
+
+    let fetchAPOD = useStore((state) => state.fetchAPOD);
 
     useEffect(() => {
         // Fetch the APOD data for today or a selected date
-        const fetchAPOD = async () => {
-            // const apiKey = 'DEMO_KEY'; // Use your NASA API key
-            // let apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
-            let apiUrl = '/apod/call';
-            if (date) apiUrl += `?date=${date}`;
-            const response = await fetch(apiUrl);
-            const data = await response.json();
-            setApodData(data);
-        };
-
-        fetchAPOD();
-    }, [date]);
+        // const fetchAPOD = async () => {
+        //     // const apiKey = 'DEMO_KEY'; // Use your NASA API key
+        //     // let apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
+        //     let apiUrl = '/apod/call';
+        //     if (date) apiUrl += `?date=${date}`;
+        //     const response = await fetch(apiUrl);
+        //     const data = await response.json();
+        //     setApodData(data);
+        // };
+        if(apodData == null) fetchAPOD();
+    }, []);
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        fetchAPOD();
         // The fetching is already triggered by the useEffect hook when date changes
     };
 

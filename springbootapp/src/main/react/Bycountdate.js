@@ -1,26 +1,40 @@
 import React, { useState } from 'react';
 import { Form, Button, Card, Row, Col, Container, DropdownButton, Dropdown } from 'react-bootstrap';
+import { useStore } from './statestore';
 
 const ByCountOrDateRange = () => {
-  const [selection, setSelection] = useState('count'); // 'count' or 'daterange'
-  const [count, setCount] = useState('');
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
-  const [apods, setApods] = useState([]);
+  // const [selection, setSelection] = useState('count'); 
+  let selection = useStore((state) => state.selection);
+  let setSelection = useStore((state) => state.setSelection);
+  
+  // const [count, setCount] = useState('');
+  let count = useStore((state) => state.count);
+  let setCount = useStore((state) => state.setCount);
+  // const [startDate, setStartDate] = useState('');
+  let startDate = useStore((state) => state.startDate);
+  let setStartDate = useStore((state) => state.setStartDate);
+  // const [endDate, setEndDate] = useState('');
+  let endDate = useStore((state) => state.endDate);
+  let setEndDate = useStore((state) => state.setEndDate);
+  // const [apods, setApods] = useState([]);
+  let apods = useStore((state) => state.apods);
+  let setApods = useStore((state) => state.setApods);
+  
+  let fetchApods = useStore((state) => state.fetchApods);
 
-  const fetchApods = async () => {
-    // let apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=IabhjfXdft4AXDugcZhBfr8fMRb1mfnk4RfYyNz0';
-    let apiUrl = '/apod/call?';
-    if (selection === 'count') {
-      apiUrl += `count=${count}`;
-    } else {
-      apiUrl += `start_date=${startDate}&end_date=${endDate}`;
-    }
+  // const fetchApods = async () => {
+  //   // let apiUrl = 'https://api.nasa.gov/planetary/apod?api_key=IabhjfXdft4AXDugcZhBfr8fMRb1mfnk4RfYyNz0';
+  //   let apiUrl = '/apod/call?';
+  //   if (selection === 'count') {
+  //     apiUrl += `count=${count}`;
+  //   } else {
+  //     apiUrl += `start_date=${startDate}&end_date=${endDate}`;
+  //   }
 
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    setApods(data);
-  };
+  //   const response = await fetch(apiUrl);
+  //   const data = await response.json();
+  //   setApods(data);
+  // };
 
   const handleSubmit = (event) => {
     event.preventDefault();
